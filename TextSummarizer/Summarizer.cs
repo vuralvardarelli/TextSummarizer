@@ -15,11 +15,11 @@ namespace TextSummarizer
             List<string> bodyParagraphs = new List<string>();
             List<string> summarySentences = new List<string>();
 
-            if (!header.Contains(" "))
+            if (!header.Contains(" ")) //header tek kelime ise header kelimelerine ekle, body'de geçip geçmediğine bakmak için
             {
                 headerWords.Add(header);
             }
-            else
+            else //header'dkai kelimeleri al body'de geçip geçmediklerine bakmak için
             {
                 headerWords = header.Split(' ').ToList();
             }
