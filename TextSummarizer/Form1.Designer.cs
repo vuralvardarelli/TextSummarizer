@@ -36,6 +36,7 @@ namespace TextSummarizer
             this.label3 = new System.Windows.Forms.Label();
             this.summarizeButton = new System.Windows.Forms.Button();
             this.summaryTextBox = new System.Windows.Forms.RichTextBox();
+            this.restartButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -99,11 +100,22 @@ namespace TextSummarizer
             this.summaryTextBox.TabIndex = 6;
             this.summaryTextBox.Text = "";
             // 
+            // restartButton
+            // 
+            this.restartButton.Location = new System.Drawing.Point(299, 512);
+            this.restartButton.Name = "restartButton";
+            this.restartButton.Size = new System.Drawing.Size(75, 23);
+            this.restartButton.TabIndex = 7;
+            this.restartButton.Text = "Restart";
+            this.restartButton.UseVisualStyleBackColor = true;
+            this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 547);
+            this.Controls.Add(this.restartButton);
             this.Controls.Add(this.summaryTextBox);
             this.Controls.Add(this.summarizeButton);
             this.Controls.Add(this.label3);
@@ -127,6 +139,7 @@ namespace TextSummarizer
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button summarizeButton;
         public System.Windows.Forms.RichTextBox summaryTextBox;
+        private System.Windows.Forms.Button restartButton;
     }
 }
 

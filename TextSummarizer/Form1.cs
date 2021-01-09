@@ -26,10 +26,23 @@ namespace TextSummarizer
             }
 
             string summary = Summarizer.Execute(headerTextBox.Text, bodyTextBox.Text);
+
             MessageBox.Show("Summarizing done! Check summary.");
+
             summaryTextBox.Enabled = true;
             summaryTextBox.ReadOnly = true;
             summaryTextBox.Text = summary;
+        }
+
+        private void restartButton_Click(object sender, EventArgs e)
+        {
+            summaryTextBox.Enabled = false;
+            summaryTextBox.ReadOnly = false;
+            headerTextBox.Text = "";
+            bodyTextBox.Text = "";
+            summaryTextBox.Text = "";
+
+            MessageBox.Show("Restarted");
         }
     }
 }
